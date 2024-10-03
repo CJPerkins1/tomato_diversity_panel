@@ -1,0 +1,104 @@
+
+
+== Warning ==  No assembly mode was specified! If you intend to assemble high-coverage multi-cell/isolate data, use '--isolate' option.
+
+
+Command line: /opt/ohpc/pub/apps/spades/3.15.5/bin/spades.py	--pe1-1	/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183308_SRR7279483_1.fastq.gz	--pe1-2	/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183308_SRR7279483_2.fastq.gz	--pe2-1	/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183310_SRR7279481_1.fastq.gz	--pe2-2	/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183310_SRR7279481_2.fastq.gz	-o	/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/spades_output	
+
+System information:
+  SPAdes version: 3.15.5
+  Python version: 3.8.5
+  OS: Linux-3.10.0-1160.119.1.el7.x86_64-x86_64-with-glibc2.10
+
+Output dir: /xdisk/rpalaniv/cjperkins1/mafft/test/genomes/spades_output
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183308_SRR7279483_1.fastq.gz']
+      right reads: ['/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183308_SRR7279483_2.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+    Library number: 2, library type: paired-end
+      orientation: fr
+      left reads: ['/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183310_SRR7279481_1.fastq.gz']
+      right reads: ['/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183310_SRR7279481_2.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /xdisk/rpalaniv/cjperkins1/mafft/test/genomes/spades_output/tmp
+  Threads: 16
+  Memory limit (in Gb): 250
+
+
+======= SPAdes pipeline started. Log can be found here: /xdisk/rpalaniv/cjperkins1/mafft/test/genomes/spades_output/spades.log
+
+/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183308_SRR7279483_1.fastq.gz: max reads length: 151
+/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183308_SRR7279483_2.fastq.gz: max reads length: 151
+/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183310_SRR7279481_1.fastq.gz: max reads length: 151
+/xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183310_SRR7279481_2.fastq.gz: max reads length: 151
+
+Reads length: 151
+
+Default k-mer sizes were set to [21, 33, 55, 77] because estimated read length (151) is equal to or greater than 150
+
+===== Before start started. 
+
+
+===== Read error correction started. 
+
+
+===== Read error correction started. 
+
+
+== Running: /opt/ohpc/pub/apps/spades/3.15.5/bin/spades-hammer /xdisk/rpalaniv/cjperkins1/mafft/test/genomes/spades_output/corrected/configs/config.info
+
+  0:00:00.000     1M / 11M   INFO    General                 (main.cpp                  :  75)   Starting BayesHammer, built from refs/heads/spades_3.15.5, git revision e757b8216f9a038fb616e9551a2d4891b2d19ad7
+  0:00:00.000     1M / 11M   INFO    General                 (main.cpp                  :  76)   Loading config from /xdisk/rpalaniv/cjperkins1/mafft/test/genomes/spades_output/corrected/configs/config.info
+  0:00:00.000     1M / 11M   INFO    General                 (main.cpp                  :  78)   Maximum # of threads to use (adjusted due to OMP capabilities): 1
+  0:00:00.000     1M / 11M   INFO    General                 (memory_limit.cpp          :  54)   Memory limit set to 250 Gb
+  0:00:00.000     1M / 11M   INFO    General                 (main.cpp                  :  86)   Trying to determine PHRED offset
+  0:00:00.001     1M / 11M   INFO    General                 (main.cpp                  :  92)   Determined value is 33
+  0:00:00.001     1M / 11M   INFO    General                 (hammer_tools.cpp          :  38)   Hamming graph threshold tau=1, k=21, subkmer positions = [ 0 10 ]
+  0:00:00.001     1M / 11M   INFO    General                 (main.cpp                  : 113)   Size of aux. kmer data 24 bytes
+     === ITERATION 0 begins ===
+  0:00:00.005     1M / 11M   INFO    General                 (kmer_index_builder.hpp    : 243)   Splitting kmer instances into 16 files using 1 threads. This might take a while.
+  0:00:00.009     1M / 11M   INFO    General                 (file_limit.hpp            :  42)   Open file limit set to 65536
+  0:00:00.009     1M / 11M   INFO    General                 (kmer_splitter.hpp         :  93)   Memory available for splitting buffers: 83.3333 Gb
+  0:00:00.009     1M / 11M   INFO    General                 (kmer_splitter.hpp         : 101)   Using cell size of 4194304
+  0:00:00.012   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183308_SRR7279483_1.fastq.gz
+  0:00:10.216   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 247382 reads
+  0:00:20.357   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 494861 reads
+  0:00:30.511   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 742620 reads
+  0:00:40.656   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 990079 reads
+  0:00:50.826   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 1238198 reads
+  0:01:01.110   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 1486415 reads
+  0:01:31.609   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 2229855 reads
+  0:02:53.107   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 4214164 reads
+  0:05:45.738   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 8425635 reads
+  0:11:33.275   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 16861325 reads
+  0:23:09.212   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 33716990 reads
+  0:33:29.802   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183308_SRR7279483_2.fastq.gz
+  0:46:16.002   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 67171131 reads
+  1:07:18.824   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183310_SRR7279481_1.fastq.gz
+  1:31:40.354   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 134331628 reads
+  1:33:16.401   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /xdisk/rpalaniv/cjperkins1/mafft/test/genomes/SRX4183310_SRR7279481_2.fastq.gz
+  1:59:21.194   577M / 577M  INFO   K-mer Splitting          (kmer_data.cpp             : 112)   Total 176017590 reads processed
+  1:59:21.197     1M / 554M  INFO    General                 (kmer_index_builder.hpp    : 249)   Starting k-mer counting.
